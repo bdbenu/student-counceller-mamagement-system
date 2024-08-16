@@ -14,7 +14,7 @@ import jakarta.persistence.Table;
 public class Counselor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String cid;
+	private Integer cid;
 	
 	@Column(name = "CON_NAME")
 	private String cname;
@@ -37,13 +37,6 @@ public class Counselor {
 	@Column(name = "UPDATED_DATE")
 	private Date updatedDate;
 
-	public String getCid() {
-		return cid;
-	}
-
-	public void setCid(String cid) {
-		this.cid = cid;
-	}
 
 	public String getCname() {
 		return cname;
@@ -99,6 +92,14 @@ public class Counselor {
 
 	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
+	}
+
+	public Integer getCid() {
+		return cid;
+	}
+
+	public void setCid(Integer cid) {
+		this.cid = cid;
 	}
 	
 	
