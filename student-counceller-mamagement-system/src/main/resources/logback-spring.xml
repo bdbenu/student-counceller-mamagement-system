@@ -1,17 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>logs/my_log.log</file>
-        <encoder>
-            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
-        </encoder>
-        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>logs/my_log.%d{yyyy-MM-dd}.log</fileNamePattern>
-            <maxHistory>30</maxHistory> <!-- Keeps logs for 30 days -->
-        </rollingPolicy>
-    </appender>
-    
-    <root level="info">
-        <appender-ref ref="FILE"/>
-    </root>
+
+	<appender name="RollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>benu_log.log</file>
+		<encoder>
+			<pattern>%d [%thread] %-5level %-50logger{40} - %msg%n</pattern>
+		</encoder>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>Benudhar-%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+			<maxFileSize>1GB</maxFileSize>
+			<maxHistory>30</maxHistory>		
+		</rollingPolicy>
+	</appender>	
+	<root level="INFO">
+		<appender-ref ref="RollingFile" />
+	</root>
+	
 </configuration>

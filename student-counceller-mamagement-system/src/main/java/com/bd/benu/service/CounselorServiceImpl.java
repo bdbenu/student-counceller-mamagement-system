@@ -4,10 +4,11 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.bd.benu.model.Counselor;
 import com.bd.benu.repo.CounselloerRepositary;
-
+@Service
 public class CounselorServiceImpl implements CounselorService{
 	
 	@Autowired
