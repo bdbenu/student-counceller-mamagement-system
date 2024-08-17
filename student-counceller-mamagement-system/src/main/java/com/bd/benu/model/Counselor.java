@@ -36,6 +36,9 @@ public class Counselor {
 	
 	@Column(name = "UPDATED_DATE")
 	private Date updatedDate;
+	
+	@Column(name = "PASSWORD")
+	private String password;
 
 
 	public String getCname() {
@@ -100,6 +103,14 @@ public class Counselor {
 
 	public void setCid(Integer cid) {
 		this.cid = cid;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 	

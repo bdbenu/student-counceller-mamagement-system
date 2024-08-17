@@ -12,7 +12,7 @@
  <form:form modelAttribute="counselor" action="register" method="post">
 <table>
 <tr>
-<td>Name:</td><td><form:input path="name" name="name" /></td>
+<td>Name:</td><td><form:input path="cname" name="cname" /></td>
 </tr>
 
 <tr>
