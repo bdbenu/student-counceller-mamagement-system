@@ -47,7 +47,16 @@ public class CouncellerController {
 		model.addAttribute("failedMessage", "Registartion Failed");
 		return "counceller_register";
 	}
+	@GetMapping("/counselrs")
+	public String counsellers(Model model) 
+	{
 
+		Counselor counselor = new Counselor();
+		model.addAttribute("counselor", counselor);
+		
+	return "counseller_details";	
+	}
+	
 	@GetMapping("/login")
 	public String councellerLogin(Model model) {
 		Counselor counselor = new Counselor();
