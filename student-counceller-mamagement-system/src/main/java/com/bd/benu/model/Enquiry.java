@@ -2,6 +2,9 @@ package com.bd.benu.model;
 
 import java.util.Date;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,9 +40,11 @@ public class Enquiry {
 	@Column(name = "STATUS")
 	private String status;
 	
+	@CreationTimestamp
 	@Column(name = "CREATE_DATE")
 	private Date create_date;
 	
+	@UpdateTimestamp
 	@Column(name = "UPDATE_DATE")
 	private Date update_date;
 

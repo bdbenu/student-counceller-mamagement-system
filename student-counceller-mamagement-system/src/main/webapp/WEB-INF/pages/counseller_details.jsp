@@ -7,6 +7,12 @@
 <title>Counselre Details</title>
 </head>
 <body>
-<h1>Counselre details</h1>
+<h1>Counslore details</h1>
+
+<table>
+<tr><td>Sl No</td><td>Name</td><td>Email</td><td>Mobile</td></tr>
+
+
+</table>
 </body>
 </html>

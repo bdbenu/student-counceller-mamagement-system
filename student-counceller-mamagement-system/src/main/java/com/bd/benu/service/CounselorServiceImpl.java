@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bd.benu.model.Counselor;
+import com.bd.benu.model.DashboardResponse;
 import com.bd.benu.repo.CounselloerRepositary;
 @Service
 public class CounselorServiceImpl implements CounselorService{
@@ -31,6 +32,18 @@ public class CounselorServiceImpl implements CounselorService{
 		if(findById.isPresent()) {
 			return findById.get();
 		}
+		return null;
+	}
+
+	@Override
+	public Counselor login(String email, String pwd) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DashboardResponse getDashboardInfo(Integer counsellorId) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 	
